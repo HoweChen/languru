@@ -1,0 +1,8 @@
+{
+  "name": "@ts-master/day2",
+  "version": "1.0.0",
+  "main": "index.ts",
+  "dependencies": {
+    "fp-ts": "^2.16.1"
+  }
+}

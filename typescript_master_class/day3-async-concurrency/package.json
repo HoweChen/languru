@@ -1,0 +1,8 @@
+{
+  "name": "@ts-master/day3",
+  "version": "1.0.0",
+  "main": "index.ts",
+  "dependencies": {
+    "node-fetch": "^3.3.2"
+  }
+}

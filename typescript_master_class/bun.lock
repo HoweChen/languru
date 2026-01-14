@@ -1,0 +1,123 @@
+{
+  "lockfileVersion": 1,
+  "configVersion": 1,
+  "workspaces": {
+    "": {
+      "name": "typescript-master-class",
+      "dependencies": {
+        "typescript": "^5.0.0",
+      },
+      "devDependencies": {
+        "@types/node": "^20.0.0",
+        "bun-types": "latest",
+      },
+    },
+    "day1-advanced-types-runtime": {
+      "name": "@ts-master/day1",
+      "version": "1.0.0",
+      "dependencies": {
+        "zod": "^3.22.4",
+      },
+    },
+    "day2-functional-patterns": {
+      "name": "@ts-master/day2",
+      "version": "1.0.0",
+      "dependencies": {
+        "fp-ts": "^2.16.1",
+      },
+    },
+    "day3-async-concurrency": {
+      "name": "@ts-master/day3",
+      "version": "1.0.0",
+      "dependencies": {
+        "node-fetch": "^3.3.2",
+      },
+    },
+    "day4-metaprogramming": {
+      "name": "@ts-master/day4",
+      "version": "1.0.0",
+      "dependencies": {
+        "reflect-metadata": "^0.2.1",
+      },
+    },
+    "day5-performance-streams": {
+      "name": "@ts-master/day5",
+      "version": "1.0.0",
+      "dependencies": {
+        "csv-parse": "^5.5.0",
+      },
+      "devDependencies": {
+        "@types/node": "^20.0.0",
+      },
+    },
+    "day6-architecture": {
+      "name": "@ts-master/day6",
+      "version": "1.0.0",
+      "dependencies": {
+        "inversify": "^6.0.2",
+        "reflect-metadata": "^0.2.1",
+      },
+    },
+    "day7-compiler-api": {
+      "name": "@ts-master/day7",
+      "version": "1.0.0",
+      "dependencies": {
+        "typescript": "^5.0.0",
+      },
+      "devDependencies": {
+        "@types/node": "^20.0.0",
+      },
+    },
+  },
+  "packages": {
+    "@inversifyjs/common": ["@inversifyjs/common@1.4.0", "", {}, "sha512-qfRJ/3iOlCL/VfJq8+4o5X4oA14cZSBbpAmHsYj8EsIit1xDndoOl0xKOyglKtQD4u4gdNVxMHx4RWARk/I4QA=="],
+
+    "@inversifyjs/core": ["@inversifyjs/core@1.3.5", "", { "dependencies": { "@inversifyjs/common": "1.4.0", "@inversifyjs/reflect-metadata-utils": "0.2.4" } }, "sha512-B4MFXabhNTAmrfgB+yeD6wd/GIvmvWC6IQ8Rh/j2C3Ix69kmqwz9pr8Jt3E+Nho9aEHOQCZaGmrALgtqRd+oEQ=="],
+
+    "@inversifyjs/reflect-metadata-utils": ["@inversifyjs/reflect-metadata-utils@0.2.4", "", { "peerDependencies": { "reflect-metadata": "0.2.2" } }, "sha512-u95rV3lKfG+NT2Uy/5vNzoDujos8vN8O18SSA5UyhxsGYd4GLQn/eUsGXfOsfa7m34eKrDelTKRUX1m/BcNX5w=="],
+
+    "@ts-master/day1": ["@ts-master/day1@workspace:day1-advanced-types-runtime"],
+
+    "@ts-master/day2": ["@ts-master/day2@workspace:day2-functional-patterns"],
+
+    "@ts-master/day3": ["@ts-master/day3@workspace:day3-async-concurrency"],
+
+    "@ts-master/day4": ["@ts-master/day4@workspace:day4-metaprogramming"],
+
+    "@ts-master/day5": ["@ts-master/day5@workspace:day5-performance-streams"],
+
+    "@ts-master/day6": ["@ts-master/day6@workspace:day6-architecture"],
+
+    "@ts-master/day7": ["@ts-master/day7@workspace:day7-compiler-api"],
+
+    "@types/node": ["@types/node@20.19.29", "", { "dependencies": { "undici-types": "~6.21.0" } }, "sha512-YrT9ArrGaHForBaCNwFjoqJWmn8G1Pr7+BH/vwyLHciA9qT/wSiuOhxGCT50JA5xLvFBd6PIiGkE3afxcPE1nw=="],
+
+    "bun-types": ["bun-types@1.3.6", "", { "dependencies": { "@types/node": "*" } }, "sha512-OlFwHcnNV99r//9v5IIOgQ9Uk37gZqrNMCcqEaExdkVq3Avwqok1bJFmvGMCkCE0FqzdY8VMOZpfpR3lwI+CsQ=="],
+
+    "csv-parse": ["csv-parse@5.6.0", "", {}, "sha512-l3nz3euub2QMg5ouu5U09Ew9Wf6/wQ8I++ch1loQ0ljmzhmfZYrH9fflS22i/PQEvsPvxCwxgz5q7UB8K1JO4Q=="],
+
+    "data-uri-to-buffer": ["data-uri-to-buffer@4.0.1", "", {}, "sha512-0R9ikRb668HB7QDxT1vkpuUBtqc53YyAwMwGeUFKRojY/NWKvdZ+9UYtRfGmhqNbRkTSVpMbmyhXipFFv2cb/A=="],
+
+    "fetch-blob": ["fetch-blob@3.2.0", "", { "dependencies": { "node-domexception": "^1.0.0", "web-streams-polyfill": "^3.0.3" } }, "sha512-7yAQpD2UMJzLi1Dqv7qFYnPbaPx7ZfFK6PiIxQ4PfkGPyNyl2Ugx+a/umUonmKqjhM4DnfbMvdX6otXq83soQQ=="],
+
+    "formdata-polyfill": ["formdata-polyfill@4.0.10", "", { "dependencies": { "fetch-blob": "^3.1.2" } }, "sha512-buewHzMvYL29jdeQTVILecSaZKnt/RJWjoZCF5OW60Z67/GmSLBkOFM7qh1PI3zFNtJbaZL5eQu1vLfazOwj4g=="],
+
+    "fp-ts": ["fp-ts@2.16.11", "", {}, "sha512-LaI+KaX2NFkfn1ZGHoKCmcfv7yrZsC3b8NtWsTVQeHkq4F27vI5igUuO53sxqDEa2gNQMHFPmpojDw/1zmUK7w=="],
+
+    "inversify": ["inversify@6.2.2", "", { "dependencies": { "@inversifyjs/common": "1.4.0", "@inversifyjs/core": "1.3.5" }, "peerDependencies": { "reflect-metadata": "~0.2.2" } }, "sha512-KB836KHbZ9WrUnB8ax5MtadOwnqQYa+ZJO3KWbPFgcr4RIEnHM621VaqFZzOZd9+U7ln6upt9n0wJei7x2BNqw=="],
+
+    "node-domexception": ["node-domexception@1.0.0", "", {}, "sha512-/jKZoMpw0F8GRwl4/eLROPA3cfcXtLApP0QzLmUT/HuPCZWyB7IY9ZrMeKw2O/nFIqPQB3PVM9aYm0F312AXDQ=="],
+
+    "node-fetch": ["node-fetch@3.3.2", "", { "dependencies": { "data-uri-to-buffer": "^4.0.0", "fetch-blob": "^3.1.4", "formdata-polyfill": "^4.0.10" } }, "sha512-dRB78srN/l6gqWulah9SrxeYnxeddIG30+GOqK/9OlLVyLg3HPnr6SqOWTWOXKRwC2eGYCkZ59NNuSgvSrpgOA=="],
+
+    "reflect-metadata": ["reflect-metadata@0.2.2", "", {}, "sha512-urBwgfrvVP/eAyXx4hluJivBKzuEbSQs9rKWCrCkbSxNv8mxPcUZKeuoF3Uy4mJl3Lwprp6yy5/39VWigZ4K6Q=="],
+
+    "typescript": ["typescript@5.9.3", "", { "bin": { "tsc": "bin/tsc", "tsserver": "bin/tsserver" } }, "sha512-jl1vZzPDinLr9eUt3J/t7V6FgNEw9QjvBPdysz9KfQDD41fQrC2Y4vKQdiaUpFT4bXlb1RHhLpp8wtm6M5TgSw=="],
+
+    "undici-types": ["undici-types@6.21.0", "", {}, "sha512-iwDZqg0QAGrg9Rav5H4n0M64c3mkR59cJ6wQp+7C4nI0gsmExaedaYLNO44eT4AtBBwjbTiGPMlt2Md0T9H9JQ=="],
+
+    "web-streams-polyfill": ["web-streams-polyfill@3.3.3", "", {}, "sha512-d2JWLCivmZYTSIoge9MsgFCZrt571BikcWGYkjC1khllbTeDlGqZ2D8vD8E/lJa8WGWbb7Plm8/XJYV7IJHZZw=="],
+
+    "zod": ["zod@3.25.76", "", {}, "sha512-gzUt/qt81nXsFGKIFcC3YnfEAx5NkunCfnDlvuBSSFS02bcXu4Lmea0AFIUwbLWxWPx3d9p8S5QoaujKcNQxcQ=="],
+  }
+}

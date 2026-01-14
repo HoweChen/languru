@@ -1,0 +1,15 @@
+{
+  "name": "typescript-master-class",
+  "version": "1.0.0",
+  "workspaces": [
+    "day*"
+  ],
+  "private": true,
+  "dependencies": {
+    "typescript": "^5.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "bun-types": "latest"
+  }
+}

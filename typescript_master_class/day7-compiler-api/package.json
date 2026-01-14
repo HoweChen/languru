@@ -1,0 +1,11 @@
+{
+  "name": "@ts-master/day7",
+  "version": "1.0.0",
+  "main": "index.ts",
+  "dependencies": {
+    "typescript": "^5.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0"
+  }
+}

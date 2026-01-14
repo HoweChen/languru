@@ -1,0 +1,8 @@
+{
+  "name": "@ts-master/day4",
+  "version": "1.0.0",
+  "main": "index.ts",
+  "dependencies": {
+    "reflect-metadata": "^0.2.1"
+  }
+}
