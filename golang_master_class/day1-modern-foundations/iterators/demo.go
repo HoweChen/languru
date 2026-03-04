@@ -38,7 +38,7 @@ func RunDemo() {
 	slog.Info("=== 3. Pull Mode: Zipping Sequences ===")
 	// Zip requires Pull mode to control multiple iterators simultaneously
 	seq1 := slices.Values([]string{"A", "B", "C", "D"})
-	seq2 := Fibonacci(100) // Infinite/large sequence
+	seq2 := Fibonacci(10) // Generate 10 numbers
 
 	for pair := range Zip(seq1, seq2) {
 		fmt.Printf("%v ", pair)
@@ -59,12 +59,12 @@ func RunDemo() {
 // Basic Generators
 // ---------------------------------------------------------
 
-// Fibonacci returns an iterator that generates Fibonacci numbers up to a limit.
+// Fibonacci returns an iterator that generates the first n Fibonacci numbers.
 // iter.Seq[int] is effectively func(yield func(int) bool).
-func Fibonacci(limit int) iter.Seq[int] {
+func Fibonacci(n int) iter.Seq[int] {
 	return func(yield func(int) bool) {
 		a, b := 0, 1
-		for a <= limit {
+		for i := 0; i < n; i++ {
 			// CRITICAL: We must check the return value of yield.
 			// If yield returns false, the caller (loop) wants to stop.
 			// We must return immediately to cleanup and exit.

@@ -28,8 +28,13 @@ type ProductView = Readonly<Product>;
 
 // 5. Deep Readonly (Recursive Mapped Type) - Advanced!
 // This ensures that even nested arrays (like 'tags') cannot be pushed to.
+// NOTE: 'object' includes arrays, null, and functions. We should exclude null and handle arrays specially.
 type DeepReadonly<T> = {
-  readonly [P in keyof T]: T[P] extends object ? DeepReadonly<T[P]> : T[P];
+  readonly [P in keyof T]: T[P] extends (infer U)[]
+    ? readonly DeepReadonly<U>[]  // Handle arrays recursively
+    : T[P] extends object
+    ? DeepReadonly<T[P]>          // Handle objects recursively
+    : T[P];                       // Primitives stay as-is
 };
 
 // --- Usage ---

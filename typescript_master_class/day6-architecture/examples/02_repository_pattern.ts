@@ -7,7 +7,13 @@
 // 3. Clarity: The interface documents exactly what data access we need.
 
 // 1. Domain Entities (Simplified for demo)
-interface User { id: string; name: string; }
+// In a real DDD approach, this would be a class with methods.
+// For this repository demo, we use an interface but note that
+// the service layer is responsible for maintaining invariants.
+interface User {
+  id: string;
+  name: string;
+}
 
 // 2. Repository Interface (Port)
 // This belongs to the DOMAIN layer.

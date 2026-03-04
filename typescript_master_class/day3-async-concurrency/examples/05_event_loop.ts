@@ -39,8 +39,11 @@ async function nonBlockingTask() {
     while (performance.now() - chunkStart < 100) {}
     
     // YIELD to event loop!
-    // `setImmediate` puts this callback at the END of the current event loop queue.
-    // This gives I/O events, timers, and incoming requests a chance to run.
+    // In Node.js, we have several options:
+    // - setImmediate: Queued in the "Check" phase (after I/O callbacks)
+    // - setTimeout(fn, 0): Queued in the "Timer" phase (minimum 1ms delay)
+    // - await Promise.resolve(): Microtask (runs before next macrotask)
+    // Here we use setTimeout(0) which works cross-platform (Browser + Node)
     await new Promise(resolve => setTimeout(resolve, 0)); 
   }
   

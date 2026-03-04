@@ -8,7 +8,12 @@ Metaprogramming allows your code to inspect, modify, and generate other code at 
 
 ### 1. Decorators (AOP)
 Decorators allow you to wrap existing logic with "Cross-Cutting Concerns" like logging, caching, validation, or authentication.
-*Note: We use "Experimental Decorators" (`experimentalDecorators: true`) as it's still the standard for DI frameworks (NestJS).*
+
+**Important**: There are TWO decorator standards in TypeScript:
+- **Standard Decorators** (TC39 Stage 3, TS 5.0+): Used in `01_method_decorator.ts`
+- **Experimental Decorators** (`experimentalDecorators: true`): Used by NestJS, Angular, and `reflect-metadata`
+
+This course shows BOTH approaches for completeness.
 
 ### 2. Reflection (`reflect-metadata`)
 TypeScript types are erased at runtime. Reflection allows us to "keep" some information (like constructor parameter types) so we can inspect them later. This is crucial for **Dependency Injection**.
